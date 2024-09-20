@@ -89,3 +89,17 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: get_devices
+  examples: |
+    - show me [device](device_id)
+    - print info for [device](device_id)
+    - get [device](device_id)
+
+- intent: get_telemetries
+  examples: |
+    - show me telemetry for [device](device_id)
+    - get telemetry data for [device](device_id)
+    - what's the telemetry info for [device](device_id)
+    - retrieve telemetry for [device ID](device_id)
+    - telemetry data for [device](device_id)

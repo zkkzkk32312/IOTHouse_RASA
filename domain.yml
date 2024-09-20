@@ -18,6 +18,27 @@ entities:
  - telemetry_value
  - telemetry_timestamp
 
+slots:
+  device:
+    type: text
+    mappings:
+    - device_id
+
+  device_id:
+    type: text
+    mappings:
+    - device_id
+
+  device_type:
+    type: text
+    mappings:
+    - device_type
+
+  telemetry:
+    type: text
+    mappings:
+    - telemetry_name
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"

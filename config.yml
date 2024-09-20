@@ -48,3 +48,8 @@ policies:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+
+api:
+  base_url: https://sample-iot.zackcheng.com
+  device_endpoint: /devices
+  telemetry_endpoint: /telemetry

@@ -8,6 +8,15 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - get_devices
+  - get_telemetries
+
+entities:
+ - device_id
+ - device_type
+ - telemetry_name
+ - telemetry_value
+ - telemetry_timestamp
 
 responses:
   utter_greet:

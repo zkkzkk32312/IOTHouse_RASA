@@ -92,14 +92,21 @@ nlu:
 
 - intent: get_devices
   examples: |
-    - show me [device](device_id)
-    - print info for [device](device_id)
-    - get [device](device_id)
+    - Show me [680539](device_id)
+    - Print device [284001](device_id)
+    - Get device [789153](device_id)
+    - What's the status of device [123456](device_id)?
+    - Can you check device [987654](device_id) for me?
+    - Show me information about device [246810](device_id)
+    - I need details on device [135790](device_id)
+    - What's going on with device [445566](device_id)?
+    - Pull up the info for device [998877](device_id)
 
 - intent: get_telemetries
   examples: |
-    - show me telemetry for [device](device_id)
-    - get telemetry data for [device](device_id)
-    - what's the telemetry info for [device](device_id)
-    - retrieve telemetry for [device ID](device_id)
-    - telemetry data for [device](device_id)
+    - Show me telemetry for [680539](device_id)
+    - Get telemetry data for [177546](device_id)
+    - What's the telemetry for device [998877](device_id)
+    - Retrieve telemetry for [123456](device_id)
+    - Telemetry data for [998877](device_id)
+    - Telemetries of device [464646](device_id)

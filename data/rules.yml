@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Get devices and show info
+  steps:
+  - intent: get_devices
+  - action: action_get_devices
+
+- rule: Get telemetry and show info
+  steps:
+  - intent: get_telemetries
+  - action: action_get_telemetries

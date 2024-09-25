@@ -11,33 +11,19 @@ intents:
   - get_devices
   - get_telemetries
 
+actions:
+  - action_get_devices
+  - action_get_telemetries
+
 entities:
  - device_id
- - device_type
- - telemetry_name
- - telemetry_value
- - telemetry_timestamp
 
 slots:
-  device:
-    type: text
-    mappings:
-    - device_id
-
   device_id:
     type: text
     mappings:
-    - device_id
-
-  device_type:
-    type: text
-    mappings:
-    - device_type
-
-  telemetry:
-    type: text
-    mappings:
-    - telemetry_name
+    - type: from_entity
+      entity: device_id
 
 responses:
   utter_greet:

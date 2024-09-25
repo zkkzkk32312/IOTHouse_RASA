@@ -27,6 +27,11 @@
 #         return []
 
 import requests
+from rasa_sdk import Action, Tracker
+
+API_BASE_URL = "https://sample-iot.zackcheng.com"
+API_DEVICE_ENDPOINT = "/devices"
+API_TELEMETRY_ENDPOINT = "/telemetry"
 
 class ActionGetDevices(Action):
     def name(self):
@@ -38,9 +43,10 @@ class ActionGetDevices(Action):
         dispatcher.utter_message(f"Device info for ID {device_id}: {devices}")
 
     def get_devices(self, dispatcher, domain, device_id):
-        api_base_url = domain.config["api"]["base_url"]
-        api_device_endpoint = domain.config["api"]["device_endpoint"]
-        api_url = f"{api_base_url}{api_device_endpoint}/{device_id}"
+        api_url = f"{API_BASE_URL}{API_DEVICE_ENDPOINT}/{device_id}"
+        print(device_id)
+        print(api_url)
+
         response = requests.get(api_url)
         if response.status_code == 200:
             return response.json()
@@ -54,13 +60,14 @@ class ActionGetTelemetries(Action):
 
     def run(self, dispatcher, tracker, domain):
         device_id = tracker.get_slot("device_id")
-        telemetry_data = self.get_telemetry_data(dispatcher, domain, device_id)
+        telemetry_data = self.get_telemetries(dispatcher, domain, device_id)
         dispatcher.utter_message(f"Telemetry data for device {device_id}: {telemetry_data}")
 
-    def get_telemetry_data(self, dispatcher, domain, device_id):
-        api_base_url = domain.config["api"]["base_url"]
-        api_telemetry_endpoint = domain.config["api"]["telemetry_endpoint"]
-        api_url = f"{api_base_url}{api_telemetry_endpoint}/{device_id}"
+    def get_telemetries(self, dispatcher, domain, device_id):
+        api_url = f"{API_BASE_URL}{API_TELEMETRY_ENDPOINT}/{device_id}"
+        print(device_id)
+        print(api_url)
+
         response = requests.get(api_url)
         if response.status_code == 200:
             return response.json()

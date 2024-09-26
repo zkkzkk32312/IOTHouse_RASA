@@ -1,2 +1,6 @@
-python -m venv ./venv
-.\venv\Scripts\activate
+rasa train
+rasa shell --debug
+python -m rasa run actions
+
+rasa run -m models --enable-api --cors "*" --debug
+rasa run actions --cors "*" --debug

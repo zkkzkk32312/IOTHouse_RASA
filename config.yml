@@ -18,7 +18,6 @@ pipeline: #null
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
@@ -41,6 +40,7 @@ policies: #null
 # # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
   - name: RulePolicy
+    # fallback_action_name: "action_default"
   - name: UnexpecTEDIntentPolicy
     max_history: 5
     epochs: 100

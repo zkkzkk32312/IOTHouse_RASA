@@ -1,23 +1,22 @@
 version: "3.1"
 
 rules:
+# - rule: Get devices and show info
+#   steps:
+#   - intent: get_devices
+#   - action: action_get_devices
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+# - rule: Get telemetry and show info
+#   steps:
+#   - intent: get_telemetries
+#   - action: action_get_telemetries
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Handle general intent
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: general
+  - action: action_default
 
-- rule: Get devices and show info
+- rule: Handle fallback
   steps:
-  - intent: get_devices
-  - action: action_get_devices
-
-- rule: Get telemetry and show info
-  steps:
-  - intent: get_telemetries
-  - action: action_get_telemetries
+    - intent: nlu_fallback
+    - action: action_default

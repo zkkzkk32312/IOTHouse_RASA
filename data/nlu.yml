@@ -1,112 +1,28 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+# - intent: get_devices
+#   examples: |
+#     - Show me [680539](device_id)
+#     - Print device [284001](device_id)
+#     - Get device [789153](device_id)
+#     - What's the status of device [123456](device_id)?
+#     - Can you check device [987654](device_id) for me?
+#     - Show me information about device [246810](device_id)
+#     - I need details on device [135790](device_id)
+#     - What's going on with device [445566](device_id)?
+#     - Pull up the info for device [998877](device_id)
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+# - intent: get_telemetries
+#   examples: |
+#     - Show me telemetry for [680539](device_id)
+#     - Print telemetries for [284001](device_id)
+#     - Get telemetry data for [177546](device_id)
+#     - What's the telemetry for device [998877](device_id)
+#     - Retrieve telemetry for [123456](device_id)
+#     - Telemetry data for [998877](device_id)
+#     - Telemetries of device [464646](device_id)
 
-- intent: affirm
+- intent: general
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
-- intent: get_devices
-  examples: |
-    - Show me [680539](device_id)
-    - Print device [284001](device_id)
-    - Get device [789153](device_id)
-    - What's the status of device [123456](device_id)?
-    - Can you check device [987654](device_id) for me?
-    - Show me information about device [246810](device_id)
-    - I need details on device [135790](device_id)
-    - What's going on with device [445566](device_id)?
-    - Pull up the info for device [998877](device_id)
-
-- intent: get_telemetries
-  examples: |
-    - Show me telemetry for [680539](device_id)
-    - Get telemetry data for [177546](device_id)
-    - What's the telemetry for device [998877](device_id)
-    - Retrieve telemetry for [123456](device_id)
-    - Telemetry data for [998877](device_id)
-    - Telemetries of device [464646](device_id)
+    - *
